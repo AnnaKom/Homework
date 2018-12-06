@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Homework2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+                                    
+             /*n1*/
+
+var N = prompt("Укажите сумму кредита");
+var M = prompt("Укажите процентную ставку");
+var Y = prompt("Укажите количество лет");
+I = M/100/12;               // процентная ставка в месяц
+C = 1+I;
+Y_m = Y*12                  // количество месяцев кредита
+Cn = Math.pow(C,Y_m);
+A = N*(I*Cn)/(Cn-1);        //ежемесячный платеж
+P = Y_m*A-N;
+Rez = Math.round(P);
+console.log("Переплата по кредиту составит: " + Rez + " рублей");*/
+
+
+                                /*n2*///НЕ РЕШЕНА!!!
+
+/*
+var str = prompt ("Введите целое число");
+var num = parseInt(str);
+var sum = 0;
+for (var i=0; i<str.length; i++){
+    sum = sum + str[i];
+};
+console.log(sum);
+*/
+
+
+                            /*n3*/ //НЕ РЕШЕНА!
+
+
+let str = prompt("Введите строку");
+console.log(str);
+let sim = prompt("Введите символ");
+console.log(sim);
+let whereIsSim = str.indexOf(sim);
+newStr = str.replace(sim, sim+sim);
+console.log(newStr);*/
+
+
+let str = prompt("Введите строку");
+console.log(str);
+let sim = prompt("Введите символ");
+console.log(sim);
+
+let pos = 0;
+while(true){
+    let findPos = str.indexOf(sim, pos);
+    if(findPos == -1) break;
+    console.log(findPos);
+    pos = findPos + 1;
+    
+    
+    
+}
+console.log(newStr);
+
+            
+            
+            
+        </script>
+    </body>
+</html>
