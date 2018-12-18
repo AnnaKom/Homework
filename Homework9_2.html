@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Homework9-2</title>
+        <style type = "text/css">
+            button {
+                width:100px;
+                height:100px;
+                border: 2px solid green;
+                padding: 0px;
+                background-color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button id = counter></button>
+    <script>
+        var counter = document.getElementById("counter"); 
+        var num = prompt("Введите цифру");
+        counter.innerText = num;
+        var i = +counter.innerText;
+        counter.onclick = function(){
+        i = i + 1
+        counter.innerHTML = i;
+        };
+    </script>
+    </body>
+</html>
