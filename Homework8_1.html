@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Homework8_1</title>
+    </head>
+    <body>
+        <div id = "clock" style = "font-weight: bold; font-size: 20px; width: 100px; height: 100px;">
+            <span id = "hours" style = "color:red"></span>
+            <span id = "minutes" style = "color: green"></span>
+            <span id = "seconds" style = "color: blue"></span>
+        </div>
+
+        <script>
+
+        function clock(){
+            var date = new Date();
+            var hours = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+
+            if (hours<10){
+                hours = "0" + hours;
+            };
+
+            if (min<10){
+                min = "0" + min;
+            };
+
+            if (sec<10){
+                sec = "0" + sec;
+            };
+
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = " : " + min;
+            document.getElementById("seconds").innerHTML = " : " + sec;
+
+        };
+            setInterval(clock, 1000);
+
+        </script>
+    </body>
+</html>
