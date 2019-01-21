@@ -1,0 +1,111 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background: url(2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:comic sans MS;
+}
+h1{
+    text-align: center;
+    color: #ff480c;
+    font-size: 70px;
+    margin: 20px;
+    font-weight: bold;
+    text-shadow: 8px -2px 10px #ffdd00;
+}
+h2{
+    text-align: center;
+    color: #027c0c;
+    font-size: 55px;
+    margin: 5px;  
+}
+.game_var, 
+.diff {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0%;
+}
+.game_var div,
+.diff div {
+    color: #027c0c;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #5aa500;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f4fac4;
+    margin: 15px;               
+}
+.game{
+    width: 1000px;
+    height: 800px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 400px;
+    top: 100px;
+}
+.start{
+    background-color: #ffea7b;
+    border: 2px solid #5aa500;
+    border-radius: 10px;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    padding: 10px;
+    top: 70%;
+    left: 40%;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-size: 45px;
+    color: #fe214e;
+}
+.game div{
+    width: 120px;
+    height: 120px;
+    border: 2px solid #359e39;
+    margin: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #4CAF50;
+    transition: 0.5s;
+    box-shadow: 6px 0px 27px 3px #389703
+}
+.game div:hover{
+    transform: scale(1.15, 1.15);
+
+}
+.timer{
+    color: #f5400e;
+    text-align: center;
+    font-size: 30px;
+}
+.totalTime{
+    color: #f5400e;
+    text-align: center;
+    width: 345px;
+    height: 180px;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    font-size: 40px;
+    background-color: #e1eedc;
+    display: none;
+    box-shadow: 13px -5px 47px 1px #fcc4e3;
+    border-radius: 10px;
+
+}
