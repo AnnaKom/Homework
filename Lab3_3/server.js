@@ -16,12 +16,6 @@ function childSaidReady(status){
 child.on('message', childSaidReady);
 
 http.createServer((request, response)=>{
-//код обработки http запроса
-}).listen(8080, ()=>{
-console.log('Server run in 8080 port!');
-});
-
-
 let _get = url.parse(request.url, true).query;
 console.log('Parameters of request: ' + JSON.stringify(_get));
 if(!(_get.num1 && _get.num2)){
@@ -53,4 +47,11 @@ child.on('message', responseFromChild);
 
 
 child.send({expression
+});	
+//код обработки http запроса
+}).listen(8080, ()=>{
+console.log('Server run in 8080 port!');
 });
+
+
+
