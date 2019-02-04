@@ -1,0 +1,36 @@
+{{>header}} <!-- Подстановка содержимого файла header.mustache -->
+<div class="container">
+<div class="py-2 text-center">
+<h1>{{title}}</h1> <!-- вставка из свойства title-->
+<!-- вставка из свойства route_url -->
+<a href="{{route_url}}/add" class="btn btn-primary">Add new</a>
+</div>
+</div>
+<div class="container">
+ <div class="row">
+{{#arrData}} <!—секция которая повторится для каждого элемента массива arrData -->
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<div class="card-body">
+<!-- вставка из свойства name -->
+<p class="card-text">Name: {{name}}</p>
+<!-- вставка из свойства price -->
+<p class="card-text">Price: {{price}}</p>
+<!-- вставка из свойства desc -->
+<p class="card-text">Description: {{desc}}</p>
+<p>
+<div class="btn-group">
+<!-- вставка из свойства route_url и id -->
+<a href="{{route_url}}/delete/{{id}}" class="btn
+btn-sm btn-outline-secondary">Delete</a>
+<a href="{{route_url}}/edit/{{id}}" class="btn btn-sm btn-outlinesecondary">Edit</a>
+</div>
+</p>
+</div>
+</div>
+</div>
+{{/arrData}} <!—окончание секции, которая повторится для каждого элемента массива
+arrData -->
+</div>
+</div>
+{{>footer}}

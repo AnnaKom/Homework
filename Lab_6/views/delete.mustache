@@ -1,0 +1,28 @@
+{{>header}} <!-- Подстановка содержимого файла header.mustache -->
+<div class="container">
+<div class="py-2 text-center">
+<h1>{{title}}</h1> <!-- вставка из свойства title-->
+</div>
+<div class="container">
+<div class="text-center mb-4">
+<!-- вставка из свойства route_url и data.id -->
+<form class="card" method="POST"
+action="{{route_url}}/delete/{{data.id}}"
+enctype="application/x-www-form-urlencoded">
+<!-- вставка из свойства data.name -->
+<p class="card-text">Name: {{data.name}}</p>
+<!-- вставка из свойства data.price -->
+<p class="card-text">Price: {{data.price}}</p>
+<!-- вставка из свойства data.desc -->
+<p class="card-text">Description: {{data.desc}}</p>
+<p>
+<input class="btn btn-primary"
+type="submit" name="submit"
+id="submit" value="Delete"/>
+<a href="{{route_url}}/"
+class="btn btn-secondary">Reset</a>
+</p>
+</form>
+</div>
+</div>
+{{>footer}}
